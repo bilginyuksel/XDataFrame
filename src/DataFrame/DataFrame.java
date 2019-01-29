@@ -8,6 +8,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class DataFrame {
@@ -834,6 +836,16 @@ public class DataFrame {
         return obj;
     }
 
+    public Object[] unique(String column_name){
+        int i ;
+        for(i=0;i<columns.size();i++)
+            if(columns.get(i).getFeature_name().equals(column_name)) break;
+
+
+        Set<Object> set = new HashSet<>(columns.get(i).getElements());
+
+        return set.toArray();
+    }
 
     private double mean(int i){
         double mean = 0;

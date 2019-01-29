@@ -101,6 +101,10 @@ public class Main {
         for(Object o: column_names)
             System.out.println("Column Name : " + o);
         System.out.println("*************************************************************************");
+        Object []unique_col = df1.unique("Species");
+        for(Object o : unique_col)
+            System.out.print(o +",");
+        System.out.println("\n****************************************************************************");
         System.out.println(df1.iloc(2,43));
 
 
