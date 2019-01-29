@@ -1,9 +1,12 @@
+import DataFrame.DataFrame;
+import DataFrameException.ColumnElementTypeException;
+import DataFrameException.ColumnRangeException;
+
 import java.util.Random;
 
 public class Main {
 
     public static void main(String args[]){
-
 
         Object[][] a = new Object[10][5];
         Random random = new Random();
@@ -48,7 +51,7 @@ public class Main {
 
      // System.out.println(df1.column("PetalLengthCm"));
         Object element = df1.element(1,2);
-        System.out.println("Get Single Element From DataFrame ");
+        System.out.println("Get Single Element From DataFrame.DataFrame ");
         System.out.println("Element : " + element);
         System.out.println("Element Type : " + element.getClass().getSimpleName());
         System.out.println("************************************************************************");
@@ -57,7 +60,7 @@ public class Main {
         }catch (ColumnElementTypeException e) {e.printStackTrace();}
 
         Object newElement = df1.element(1,2);
-        System.out.println("Get New Element From DataFrame");
+        System.out.println("Get New Element From DataFrame.DataFrame");
         System.out.println("Element : " + newElement);
         System.out.println("Element Type : " + element.getClass().getSimpleName());
         System.out.println("*************************************************************************");
@@ -92,7 +95,14 @@ public class Main {
         System.out.println("***********************************************************************");
         System.out.println(df1.describe());
         System.out.println("**********************************************************************");
+        System.out.println("Shape of Rows : " + df1.shape()[0]);
+        System.out.println("Shape of Columns : " + df1.shape()[1]);
+        Object column_names[] = df1.column_names();
+        for(Object o: column_names)
+            System.out.println("Column Name : " + o);
+        System.out.println("*************************************************************************");
         System.out.println(df1.iloc(2,43));
+
 
 
 

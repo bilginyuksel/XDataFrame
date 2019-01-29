@@ -1,3 +1,5 @@
+package DataFrameException;
+
 public class ColumnRangeException extends Exception {
     String message;
     public ColumnRangeException(String message){

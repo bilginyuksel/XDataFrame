@@ -1,3 +1,8 @@
+package DataFrame;
+
+import DataFrameException.ColumnElementTypeException;
+import DataFrameException.ColumnRangeException;
+
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -23,12 +28,12 @@ public class DataFrame {
 
         /***********************************************************************************************************
 
-        DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
+        DataFrame.DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
 
-                        It converts a 2D array to DataFrame
+                        It converts a 2D array to DataFrame.DataFrame
 
 
-                 Create Object From DataFrame df = new DataFrame(); then you can use this function like
+                 Create Object From DataFrame.DataFrame df = new DataFrame.DataFrame(); then you can use this function like
                  df.arrayToDataFrame(2DArray); it supplies all variable types Object,String,int,double
 
 
@@ -42,9 +47,9 @@ public class DataFrame {
             for(j=0;j<a[i].length;j++)
                 a[i][j] = random.nextFloat();  #Creates number floating points
 
-        #You filled an array now create DataFrame object and call function arrayToDataFrame
+        #You filled an array now create DataFrame.DataFrame object and call function arrayToDataFrame
 
-        DataFrame df = new DataFrame();
+        DataFrame.DataFrame df = new DataFrame.DataFrame();
         df.arrayToDataFrame(a);
         System.out.println(a);
 
@@ -84,12 +89,12 @@ public class DataFrame {
 
         /***********************************************************************************************************
 
-         DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
+         DataFrame.DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
 
-         It converts a 2D array to DataFrame
+         It converts a 2D array to DataFrame.DataFrame
 
 
-         Create Object From DataFrame df = new DataFrame(); then you can use this function like
+         Create Object From DataFrame.DataFrame df = new DataFrame.DataFrame(); then you can use this function like
          df.arrayToDataFrame(2DArray); it supplies all variable types Object,String,int,double
 
 
@@ -103,9 +108,9 @@ public class DataFrame {
          for(j=0;j<a[i].length;j++)
          a[i][j] = random.nextInt(100);  #Bound 100 this function creates random numbers beetween 0<x<100
 
-         #You filled an array now create DataFrame object and call function arrayToDataFrame
+         #You filled an array now create DataFrame.DataFrame object and call function arrayToDataFrame
 
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.arrayToDataFrame(a);
          System.out.println(a);
 
@@ -155,12 +160,12 @@ public class DataFrame {
 
         /***********************************************************************************************************
 
-         DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
+         DataFrame.DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
 
-         It converts a 2D array to DataFrame
+         It converts a 2D array to DataFrame.DataFrame
 
 
-         Create Object From DataFrame df = new DataFrame(); then you can use this function like
+         Create Object From DataFrame.DataFrame df = new DataFrame.DataFrame(); then you can use this function like
          df.arrayToDataFrame(2DArray); it supplies all variable types Object,String,int,double
 
 
@@ -174,9 +179,9 @@ public class DataFrame {
          for(j=0;j<a[i].length;j++)
          a[i][j] = random.nextDouble();  #Creates double points
 
-         #You filled an array now create DataFrame object and call function arrayToDataFrame
+         #You filled an array now create DataFrame.DataFrame object and call function arrayToDataFrame
 
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.arrayToDataFrame(a);
          System.out.println(a);
 
@@ -222,12 +227,12 @@ public class DataFrame {
 
         /***********************************************************************************************************
 
-         DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
+         DataFrame.DataFrame contains columns, every column has own data type. You can manipulate columns as you wanted.
 
-         It converts a 2D array to DataFrame
+         It converts a 2D array to DataFrame.DataFrame
 
 
-         Create Object From DataFrame df = new DataFrame(); then you can use this function like
+         Create Object From DataFrame.DataFrame df = new DataFrame.DataFrame(); then you can use this function like
          df.arrayToDataFrame(2DArray); it supplies all variable types Object,String,int,double
 
 
@@ -242,9 +247,9 @@ public class DataFrame {
          a[i][j] = String.valueOf(random.nextInt(100));  #Bound 100 this function creates random numbers beetween 0<x<100
 
 
-         #You filled an array now create DataFrame object and call function arrayToDataFrame
+         #You filled an array now create DataFrame.DataFrame object and call function arrayToDataFrame
 
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.arrayToDataFrame(a);
          System.out.println(a);
 
@@ -303,7 +308,7 @@ public class DataFrame {
         /***********************************************************************************************
         Reads csvFiles according to given path.Just create dataframe object and call the function.
         Sample: ---------------------------------------------------------------------------------
-        DataFrame df = new DataFrame();
+        DataFrame.DataFrame df = new DataFrame.DataFrame();
         df = df.read_csv(file_path);
         ************************************************************************************************/
         BufferedReader bufferedReader = null;
@@ -323,8 +328,8 @@ public class DataFrame {
             //Read 2 lines for column names and column types for each one, start control with integer>double>String>Object
             Object [][]temp = new Object[rowlen][collen];
             bufferedReader = new BufferedReader(new FileReader(path));
-            System.out.println("Row Length : " +temp.length);
-            System.out.println("Column Length : " +temp[0].length);
+            System.out.println("DataFrame.Row Length : " +temp.length);
+            System.out.println("DataFrame.Column Length : " +temp[0].length);
 
             while((line = bufferedReader.readLine())!=null){
 
@@ -379,7 +384,7 @@ public class DataFrame {
         /****************************************************************************************************
          Every column has its own type. Because of this we have to do type conversion.
          According to type it converts the array. Finds type as looking array's first element(not column name).
-         Using : Create a column object. Column constructor takes parameter as array(any type). So for declaring the type
+         Using : Create a column object. DataFrame.Column constructor takes parameter as array(any type). So for declaring the type
          we are calling our function check_type
          SAMPLE : -------------------------------------------------------------------------------------------
 
@@ -432,9 +437,9 @@ public class DataFrame {
         /***********************************************************************************************************
          *
         If you want to edit single column or want to examine single column more detailed, you can use that function
-        this function returns you a single column DataFrame. Takes one parameter feature (feature name).
+        this function returns you a single column DataFrame.DataFrame. Takes one parameter feature (feature name).
         SAMPLE : ------------------------------------------------------------------------------------------
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.read_csv("iris.csv");
          df.info();
 
@@ -479,12 +484,12 @@ public class DataFrame {
     public DataFrame newColumn(String feature_name , Object []column) throws ColumnRangeException {
 
         /***********************************************************************************************************
-        This method adds new Column to your DataFrame object. Takes 2 parameters
+        This method adds new DataFrame.Column to your DataFrame.DataFrame object. Takes 2 parameters
         first parameter column name second parameter 1D array (column elements).
-        If the size doesn't fit the DataFrame it throws an exception otherwise it adds new column
-        to your DataFrame.
+        If the size doesn't fit the DataFrame.DataFrame it throws an exception otherwise it adds new column
+        to your DataFrame.DataFrame.
         SAMPLE : --------------------------------------------------------------------------------------------
-        #I assume you have a not null DataFrame object named df.
+        #I assume you have a not null DataFrame.DataFrame object named df.
         Object []column_elements = new Object[length];
         #fill column_elements ARRAY
 
@@ -527,7 +532,7 @@ public class DataFrame {
         This method changes column to an Object[] type array for manipulation detailed. Takes one parameter
         index of wanted column.
          SAMPLE : ------------------------------------------------------------------------------------------
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.read_csv("iris.csv");
          Object tmp[] = df.array_from_column(2);
          -----------------------------------------------------------------------------------------------------
@@ -542,15 +547,15 @@ public class DataFrame {
         else if(type.equals("Integer")) type="int64";
 
         System.out.println("Type of Type :" + type);
-        System.out.println("Column Real Type : " + columns.get(col_index).getType()  );
+        System.out.println("DataFrame.Column Real Type : " + columns.get(col_index).getType()  );
         if(columns.get(col_index).getType() !=  type)
             throw new ColumnElementTypeException("Type of object should same with column data type !");
         /**************************************************************************************
-        This function changes one element from DataFrame. According to column index and row index
+        This function changes one element from DataFrame.DataFrame. According to column index and row index
           finds the element then removes the element. After removing it add's the new element which
           is taken as parameter.
           SAMPLE :----------------------------------------------------------------------------------
-          #I assume you have a non null DataFrame object
+          #I assume you have a non null DataFrame.DataFrame object
           df.changeElement(2,3,2.83);
           ------------------------------------------------------------------------------------------
           First parameter column index , second parameter row index.
@@ -560,12 +565,12 @@ public class DataFrame {
         columns.get(col_index).getElements().remove(row_index);
         columns.get(col_index).getElements().add(row_index,element);
         rows.get(row_index+1).getRow().remove(col_index+1);
-        System.out.println("Dealed Row Removed Version : " + rows.get(row_index+1));
+        System.out.println("Dealed DataFrame.Row Removed Version : " + rows.get(row_index+1));
         rows.get(row_index+1).getRow().add(col_index+1,element);
-        System.out.println("Dealed Row Added Version : " + rows.get(row_index+1));
+        System.out.println("Dealed DataFrame.Row Added Version : " + rows.get(row_index+1));
         System.out.println("Getting objecct : " + tmp);
-        System.out.println("Added Column Place : " + columns.get(col_index).getElements().get(row_index));
-        System.out.println("Added Row Place :"+ rows.get(row_index+1).getRow().get(col_index));
+        System.out.println("Added DataFrame.Column Place : " + columns.get(col_index).getElements().get(row_index));
+        System.out.println("Added DataFrame.Row Place :"+ rows.get(row_index+1).getRow().get(col_index));
         return new DataFrame(rows,columns);
     }
 
@@ -575,10 +580,10 @@ public class DataFrame {
         /***********************************************************************************************
 
         loc function takes 2 integer parameters start,end : start parameter means start index of columns,
-        end parameter means end index of columns and it gives you a new DataFrame with generated columns.
+        end parameter means end index of columns and it gives you a new DataFrame.DataFrame with generated columns.
 
         SAMPLE : ---------------------------------------------------------------------------------------
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.read_csv('iris.csv'); #Fill dataFrame from iris.csv file
          df.loc(1,6); #Your changed dataFrame
          -----------------------------------------------------------------------------------------------
@@ -615,7 +620,7 @@ public class DataFrame {
         return new DataFrame(this.rows,this.columns);}
     public DataFrame iloc(int start,int end){
 
-        //This function returns you a DataFrame. New rows beetween start and end index.
+        //This function returns you a DataFrame.DataFrame. New rows beetween start and end index.
         //Using same with loc function...
 
         ArrayList<Row> r = new ArrayList<>();
@@ -645,13 +650,33 @@ public class DataFrame {
     }
 
 
+    public Object[] column_names(){
+
+        //Returns Object Array which containts Column_names Of DataFrame..
+
+        Object[] col_names = new Object[columns.size()];
+        int i=0;
+        for(Column c: columns)
+            col_names[i++] = c.getFeature_name();
+        return col_names;
+
+    }
+    public int[] shape(){
+        //Gives dataframe shape rows-columns first index points rows, second index points columns
+        int shapeofdata [] = new int[2];
+        shapeofdata[1] = columns.size();
+        shapeofdata[0] = rows.size()-1;
+        return shapeofdata;
+    }
+
+
 
     public String head(int element){
         /*
-        Gives First elements(given parameter element) Elements of DataFrame for first look at data
+        Gives First elements(given parameter element) Elements of DataFrame.DataFrame for first look at data
 
         SAMPLE : ---------------------------------------------------------------------------------
-        DataFrame df = new DataFrame();
+        DataFrame.DataFrame df = new DataFrame.DataFrame();
         df.read_csv("iris.csv");
         System.out.println(df.head(element));
 
@@ -666,10 +691,10 @@ public class DataFrame {
     }
     public String head(){
         /*
-        Gives First 5 Elements of DataFrame for first look at data
+        Gives First 5 Elements of DataFrame.DataFrame for first look at data
 
         SAMPLE : ---------------------------------------------------------------------------------
-        DataFrame df = new DataFrame();
+        DataFrame.DataFrame df = new DataFrame.DataFrame();
         df.read_csv("iris.csv");
         System.out.println(df.head());
 
@@ -684,10 +709,10 @@ public class DataFrame {
     }
     public String tail(){
         /*
-        Gives Last 5 Elements of DataFrame for first look at data
+        Gives Last 5 Elements of DataFrame.DataFrame for first look at data
 
         SAMPLE : ---------------------------------------------------------------------------------
-        DataFrame df = new DataFrame();
+        DataFrame.DataFrame df = new DataFrame.DataFrame();
         df.read_csv("iris.csv");
         System.out.println(df.tail());
 
@@ -703,10 +728,10 @@ public class DataFrame {
     }
     public String tail(int element){
         /*
-        Gives Last elements(given parameter element) Elements of DataFrame for first look at data
+        Gives Last elements(given parameter element) Elements of DataFrame.DataFrame for first look at data
 
         SAMPLE : ---------------------------------------------------------------------------------
-        DataFrame df = new DataFrame();
+        DataFrame.DataFrame df = new DataFrame.DataFrame();
         df.read_csv("iris.csv");
         System.out.println(df.tail(element));
 
@@ -722,10 +747,10 @@ public class DataFrame {
     public String info(){
 
         /*********************************************************************************************
-        Gives information with data Row length, row indexes , Columns ,column sizes , column data types.
+        Gives information with data DataFrame.Row length, row indexes , Columns ,column sizes , column data types.
 
          SAMPLE : ------------------------------------------------------------------------------------
-         DataFrame df = new DataFrame();
+         DataFrame.DataFrame df = new DataFrame.DataFrame();
          df.read_csv("iris.csv");
          System.out.println(df.info());
 
@@ -766,7 +791,7 @@ public class DataFrame {
         This function gives statistical information about unsorted dataFrame. Like column row count for data
         mean for every column, every columns min value , every columns median,qartil1,qartil3,
         and max value. Easy to call :
-        I assume you have a non-null DataFrame object named df
+        I assume you have a non-null DataFrame.DataFrame object named df
         System.out.println(df.describe());
 
         ****************************************************************************************************/
