@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/Main.java" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95c19f7b-0ce5-4419-811f-317083472347" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Column.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+              <folding>
+                <element signature="method#Column#0;class#Column#0" />
+                <element signature="method#Column#1;class#Column#0" />
+                <element signature="method#Column#2;class#Column#0" />
+                <element signature="method#Column#3;class#Column#0" />
+                <element signature="method#min#0;class#Column#0" />
+                <element signature="method#max#0;class#Column#0" />
+                <element signature="method#Q1#0;class#Column#0" />
+                <element signature="method#Q2#0;class#Column#0" />
+                <element signature="method#Q3#0;class#Column#0" />
+                <element signature="method#toString#0;class#Column#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Row.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+              <folding>
+                <element signature="method#Row#0;class#Row#0" />
+                <element signature="method#toString#0;class#Row#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#arrayToDataFrame#0;class#DataFrame#0" />
+                <element signature="method#arrayToDataFrame#1;class#DataFrame#0" />
+                <element signature="method#arrayToDataFrame#2;class#DataFrame#0" />
+                <element signature="method#arrayToDataFrame#3;class#DataFrame#0" />
+                <element signature="method#read_csv#0;class#DataFrame#0" />
+                <element signature="method#editColumn#0;class#DataFrame#0" />
+                <element signature="method#column#0;class#DataFrame#0" />
+                <element signature="method#newColumn#0;class#DataFrame#0" />
+                <element signature="method#element#0;class#DataFrame#0" />
+                <element signature="method#array_from_column#0;class#DataFrame#0" />
+                <element signature="method#changeElement#0;class#DataFrame#0" />
+                <element signature="method#loc#0;class#DataFrame#0" />
+                <element signature="method#iloc#0;class#DataFrame#0" />
+                <element signature="method#head#0;class#DataFrame#0" />
+                <element signature="method#head#1;class#DataFrame#0" />
+                <element signature="method#tail#0;class#DataFrame#0" />
+                <element signature="method#tail#1;class#DataFrame#0" />
+                <element signature="method#info#0;class#DataFrame#0" />
+                <element signature="method#describe#0;class#DataFrame#0" />
+                <element signature="method#mean#0;class#DataFrame#0" />
+                <element signature="method#toString#0;class#DataFrame#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>row</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Row.java" />
+        <option value="$PROJECT_DIR$/src/DataFrameSizeException.java" />
+        <option value="$PROJECT_DIR$/src/ColumnRangeException.java" />
+        <option value="$PROJECT_DIR$/src/ElementTypeException.java" />
+        <option value="$PROJECT_DIR$/src/ColumnElementTypeException.java" />
+        <option value="$PROJECT_DIR$/src/Column.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/DataFrame.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="XDataFrame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XDataFrame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548752192271" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="XDataFrame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95c19f7b-0ce5-4419-811f-317083472347" name="Default Changelist" comment="" />
+      <created>1546874084961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546874084961</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15060242" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49154928" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47323942" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32957748" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3887324" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32957748" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/DataFrameSizeException.java" />
+    <entry file="file://$PROJECT_DIR$/src/ElementTypeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ColumnElementTypeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding>
+            <element signature="e#99#100#0" expanded="true" />
+            <element signature="e#119#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ColumnRangeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Column.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+          <folding>
+            <element signature="method#Column#0;class#Column#0" />
+            <element signature="method#Column#1;class#Column#0" />
+            <element signature="method#Column#2;class#Column#0" />
+            <element signature="method#Column#3;class#Column#0" />
+            <element signature="method#min#0;class#Column#0" />
+            <element signature="method#max#0;class#Column#0" />
+            <element signature="method#Q1#0;class#Column#0" />
+            <element signature="method#Q2#0;class#Column#0" />
+            <element signature="method#Q3#0;class#Column#0" />
+            <element signature="method#toString#0;class#Column#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Row.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+          <folding>
+            <element signature="method#Row#0;class#Row#0" />
+            <element signature="method#toString#0;class#Row#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#arrayToDataFrame#0;class#DataFrame#0" />
+            <element signature="method#arrayToDataFrame#1;class#DataFrame#0" />
+            <element signature="method#arrayToDataFrame#2;class#DataFrame#0" />
+            <element signature="method#arrayToDataFrame#3;class#DataFrame#0" />
+            <element signature="method#read_csv#0;class#DataFrame#0" />
+            <element signature="method#editColumn#0;class#DataFrame#0" />
+            <element signature="method#column#0;class#DataFrame#0" />
+            <element signature="method#newColumn#0;class#DataFrame#0" />
+            <element signature="method#element#0;class#DataFrame#0" />
+            <element signature="method#array_from_column#0;class#DataFrame#0" />
+            <element signature="method#changeElement#0;class#DataFrame#0" />
+            <element signature="method#loc#0;class#DataFrame#0" />
+            <element signature="method#iloc#0;class#DataFrame#0" />
+            <element signature="method#head#0;class#DataFrame#0" />
+            <element signature="method#head#1;class#DataFrame#0" />
+            <element signature="method#tail#0;class#DataFrame#0" />
+            <element signature="method#tail#1;class#DataFrame#0" />
+            <element signature="method#info#0;class#DataFrame#0" />
+            <element signature="method#describe#0;class#DataFrame#0" />
+            <element signature="method#mean#0;class#DataFrame#0" />
+            <element signature="method#toString#0;class#DataFrame#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
