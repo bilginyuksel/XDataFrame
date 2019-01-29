@@ -22,7 +22,6 @@ public class DataFrame {
     public DataFrame(){new Row();}
 
 
-
     //**********************************************************************************************************
     //ARRAYTODATAFRAME FUNCTIONS
 
@@ -858,7 +857,6 @@ public class DataFrame {
 
         return mean/columns.get(i).size();
     }
-
 
     @Override
     public String toString() {

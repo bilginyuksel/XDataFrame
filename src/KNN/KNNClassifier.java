@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Knn {
+public class KNNClassifier {
 
     private DataFrame data,label;
     private int k_NN;
     private double distances[];
     private int indexes_of_distances[];
 
-    public Knn(int k_NN){
+    public KNNClassifier(int k_NN){
         this.k_NN =k_NN;
     }
 
@@ -38,6 +38,9 @@ public class Knn {
         for(int i=0;i<k_NN;i++)
             neighbors[i] = this.label.element(0,indexes_of_distances[i]);
 
+        for(Object o : neighbors)
+            System.out.println("Neigbors :" + o);
+
         Set<Object> obj_set = new HashSet<>(Arrays.asList(neighbors));
         int size_of_unique_keys = obj_set.size();
         Object[]unique = obj_set.toArray();
@@ -52,7 +55,7 @@ public class Knn {
             for(int i=0;i<neighbors.length;i++){
                 if(tmp == neighbors[i]) tmp_count++;
             }
-            counts[j]=tmp_count;
+            counts[j++]=tmp_count;
             tmp_count = 0;
         }
 
@@ -68,6 +71,7 @@ public class Knn {
         //Write unique function for label type count
         Object predictions[] = new Object[test.shape()[0]];
         predictions[0] = tmp;
+
         return predictions;
     }
 
@@ -81,11 +85,15 @@ public class Knn {
         double tmp =0;
         double results[] = new double[sizeOfRows];
 
+        System.out.println("Size of Features of Data : " +sizeOfFeatures);
+        System.out.println("Size of Rows of Data : " + sizeOfRows);
+        System.out.println(test);
         //size of rows big for
         for(int i=0;i<sizeOfRows;i++){
             //Size of features inner for
             for(int j=0;j<sizeOfFeatures;j++){
-               tmp += Double.parseDouble(this.data.element(i,j).toString())-Double.parseDouble(test.element(i,j).toString());
+
+               tmp += Double.parseDouble(this.data.element(j,i).toString())-Double.parseDouble(test.element(j,0).toString());
             }
             tmp = Math.sqrt(tmp) ;
             results[i] = tmp;
@@ -96,7 +104,7 @@ public class Knn {
         return results;
     }
 
-    public void sort(double[] dist,int[] indexes){
+    private void sort(double[] dist,int[] indexes){
         //Sort these two then its ending
         //Sorts the distances and indexes according to distances for finding which row index is the smallest
         int min_index,length = dist.length;

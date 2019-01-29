@@ -1,6 +1,7 @@
 import DataFrame.DataFrame;
 import DataFrameException.ColumnElementTypeException;
 import DataFrameException.ColumnRangeException;
+import KNN.KNNClassifier;
 
 import java.util.Random;
 
@@ -102,11 +103,27 @@ public class Main {
             System.out.println("Column Name : " + o);
         System.out.println("*************************************************************************");
         Object []unique_col = df1.unique("Species");
+        System.out.println("Unique Keys ");
         for(Object o : unique_col)
             System.out.print(o +",");
         System.out.println("\n****************************************************************************");
         System.out.println(df1.iloc(2,43));
 
+
+        System.out.println("*********************************************************************************");
+        KNNClassifier knn = new KNNClassifier(3);
+        DataFrame df3 = new DataFrame();
+        DataFrame df5 = df3.read_csv("iris.csv");
+        knn.fit(df3.loc(1,5),df5.column("Species"));
+        Object [][] test = new Object[1][4];
+        test[0][0] =5.0;
+        test[0][1] =3.0;
+        test[0][2] = 1.0;
+        test[0][3] = 0.7;
+
+        DataFrame df4 = new DataFrame();
+        for(Object o : knn.predict(df4.arrayToDataFrame(test)))
+            System.out.println("Knn Predicts :" + o);
 
 
 

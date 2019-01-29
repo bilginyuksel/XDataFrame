@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c19f7b-0ce5-4419-811f-317083472347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XDataFrame/DataFrame/DataFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XDataFrame/DataFrame/DataFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XDataFrame/KNN/Knn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/XDataFrame/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/XDataFrame/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFrame/DataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFrame/DataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KNN/Knn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KNN/Knn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KNN/Knn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KNN/KNNClassifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataFrame/Column.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="60">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="method#Column#0;class#Column#0" />
                 <element signature="method#Column#1;class#Column#0" />
@@ -39,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state relative-caret-position="720">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,11 +56,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/KNN/Knn.java">
+        <entry file="file://$PROJECT_DIR$/src/KNN/KNNClassifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+            <state relative-caret-position="340">
+              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#fit#0;class#Knn#0" />
                 <element signature="method#predict#0;class#Knn#0" />
                 <element signature="method#euclidianDistance#0;class#Knn#0" />
                 <element signature="method#sort#0;class#Knn#0" />
@@ -68,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataFrame/DataFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="845" selection-start-line="845" selection-end-line="845" />
+            <state relative-caret-position="103">
+              <caret line="527" selection-start-line="527" selection-end-line="527" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#arrayToDataFrame#0;class#DataFrame#0" />
@@ -79,7 +85,7 @@
                 <element signature="method#read_csv#0;class#DataFrame#0" />
                 <element signature="method#editColumn#0;class#DataFrame#0" />
                 <element signature="method#column#0;class#DataFrame#0" />
-                <element signature="method#element#0;class#DataFrame#0" />
+                <element signature="method#newColumn#0;class#DataFrame#0" />
                 <element signature="method#array_from_column#0;class#DataFrame#0" />
                 <element signature="method#changeElement#0;class#DataFrame#0" />
                 <element signature="method#loc#0;class#DataFrame#0" />
@@ -92,6 +98,7 @@
                 <element signature="method#tail#1;class#DataFrame#0" />
                 <element signature="method#info#0;class#DataFrame#0" />
                 <element signature="method#describe#0;class#DataFrame#0" />
+                <element signature="method#unique#0;class#DataFrame#0" />
                 <element signature="method#mean#0;class#DataFrame#0" />
                 <element signature="method#toString#0;class#DataFrame#0" />
               </folding>
@@ -128,13 +135,14 @@
         <option value="$PROJECT_DIR$/src/KNN/K_nn.java" />
         <option value="$PROJECT_DIR$/src/Row.java" />
         <option value="$PROJECT_DIR$/src/DataFrame/Row.java" />
+        <option value="$PROJECT_DIR$/src/KNN/Knn.java" />
         <option value="$PROJECT_DIR$/src/DataFrame/DataFrame.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/KNN/Knn.java" />
+        <option value="$PROJECT_DIR$/src/KNN/KNNClassifier.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -144,10 +152,29 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="XDataFrame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XDataFrame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548758875209" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548795481729" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -200,9 +227,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20749666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20749666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -229,6 +255,34 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20749666" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32957748" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.49154928" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47323942" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32957748" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3887324" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32957748" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/DataFrameSizeException.java" />
@@ -259,29 +313,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataFrame/Column.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="method#Column#0;class#Column#0" />
-            <element signature="method#Column#1;class#Column#0" />
-            <element signature="method#Column#2;class#Column#0" />
-            <element signature="method#Column#3;class#Column#0" />
-            <element signature="method#min#0;class#Column#0" />
-            <element signature="method#max#0;class#Column#0" />
-            <element signature="method#Q1#0;class#Column#0" />
-            <element signature="method#Q2#0;class#Column#0" />
-            <element signature="method#Q3#0;class#Column#0" />
-            <element signature="method#toString#0;class#Column#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFrame/DataFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="845" selection-start-line="845" selection-end-line="845" />
+        <state relative-caret-position="103">
+          <caret line="527" selection-start-line="527" selection-end-line="527" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#arrayToDataFrame#0;class#DataFrame#0" />
@@ -291,7 +326,7 @@
             <element signature="method#read_csv#0;class#DataFrame#0" />
             <element signature="method#editColumn#0;class#DataFrame#0" />
             <element signature="method#column#0;class#DataFrame#0" />
-            <element signature="method#element#0;class#DataFrame#0" />
+            <element signature="method#newColumn#0;class#DataFrame#0" />
             <element signature="method#array_from_column#0;class#DataFrame#0" />
             <element signature="method#changeElement#0;class#DataFrame#0" />
             <element signature="method#loc#0;class#DataFrame#0" />
@@ -304,17 +339,20 @@
             <element signature="method#tail#1;class#DataFrame#0" />
             <element signature="method#info#0;class#DataFrame#0" />
             <element signature="method#describe#0;class#DataFrame#0" />
+            <element signature="method#unique#0;class#DataFrame#0" />
             <element signature="method#mean#0;class#DataFrame#0" />
             <element signature="method#toString#0;class#DataFrame#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/KNN/Knn.java">
+    <entry file="file://$PROJECT_DIR$/src/KNN/KNNClassifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+        <state relative-caret-position="340">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#fit#0;class#Knn#0" />
             <element signature="method#predict#0;class#Knn#0" />
             <element signature="method#euclidianDistance#0;class#Knn#0" />
             <element signature="method#sort#0;class#Knn#0" />
@@ -324,10 +362,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state relative-caret-position="720">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFrame/Column.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="method#Column#0;class#Column#0" />
+            <element signature="method#Column#1;class#Column#0" />
+            <element signature="method#Column#2;class#Column#0" />
+            <element signature="method#Column#3;class#Column#0" />
+            <element signature="method#min#0;class#Column#0" />
+            <element signature="method#max#0;class#Column#0" />
+            <element signature="method#Q1#0;class#Column#0" />
+            <element signature="method#Q2#0;class#Column#0" />
+            <element signature="method#Q3#0;class#Column#0" />
+            <element signature="method#toString#0;class#Column#0" />
           </folding>
         </state>
       </provider>
