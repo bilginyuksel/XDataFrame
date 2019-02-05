@@ -2,6 +2,10 @@ import DataFrame.DataFrame;
 import DataFrameException.ColumnElementTypeException;
 import DataFrameException.ColumnRangeException;
 import KNN.KNNClassifier;
+import LinearRegression.LinearRegression;
+import LinearRegression.NormalEquation;
+import LinearRegression.SimpleLinearRegression;
+import jdk.swing.interop.SwingInterOpUtils;
 
 import java.util.Random;
 
@@ -126,6 +130,40 @@ public class Main {
             System.out.println("Knn Predicts :" + o);
 
 
+        Object[][] bayes =new Object[5][5];
+        for(int i=0;i<bayes.length;i++){
+            for(int j=0;j<bayes[i].length;j++){
+                bayes[i][j] = random.nextInt(100);
+            }
+        }
+        int[][] omg = new int[150][1];
+        for(int i=0;i<50;i++)
+            omg[i][0] = 0;
+        for(int i=50;i<100;i++)
+            omg[i][0]=1;
+        for(int i=100;i<150;i++)
+            omg[i][0]=2;
+
+        System.out.println("***************************************************************");
+
+
+        Double X[] = {5.21,3.32,6.0,4.0,8.21,10.32,5.2,5.3,11.0};
+        Double y[] = {1.60,0.80,1.80,1.30,2.50,3.0,1.6,1.63,4.0};
+
+        SimpleLinearRegression s = new SimpleLinearRegression();
+        s.fit(X,y);
+        System.out.println("Simple Linear Regression");
+        System.out.println("Predicted Value : "+ s.predict(5.21));
+        System.out.println("Real Value : " + y[0]);
+
+        System.out.println("**********************************************************");
+        LinearRegression lr = new LinearRegression(0.01,1000);
+        lr.fit(df3,df4.arrayToDataFrame(omg));
+        lr.predict(df4.arrayToDataFrame(test));
+
+        System.out.println("**************************************************************");
+
+        //NormalEquation n = new NormalEquation(df3,new DataFrame().arrayToDataFrame(omg),bayes);
 
     }
 

@@ -845,6 +845,11 @@ public class DataFrame {
 
         return set.toArray();
     }
+    public Object[] row(int row_index){
+        Object[] row = this.rows.get(row_index+1).getRow().toArray();
+
+        return row;
+    }
 
     private double mean(int i){
         double mean = 0;
