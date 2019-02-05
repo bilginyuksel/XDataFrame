@@ -26,10 +26,10 @@ public class KNNClassifier {
         * After finding distances sorts the distances. And finds neigbors according to K-nearest-neighbor number.Then calculates the
         * weight of which class has high rate. After that process returns the answer.
         * */
-        distances = euclidianDistance(test);
-        indexes_of_distances= new int[distances.length];
+        this.distances = euclidianDistance(test);
+        this.indexes_of_distances= new int[distances.length];
         for(int i=0;i<distances.length;i++)
-            indexes_of_distances[i] = i;
+            this.indexes_of_distances[i] = i;
 
         sort(distances,indexes_of_distances);
 
@@ -41,9 +41,12 @@ public class KNNClassifier {
         for(Object o : neighbors)
             System.out.println("Neigbors :" + o);
 
+
+        //Test set a couple times
         Set<Object> obj_set = new HashSet<>(Arrays.asList(neighbors));
         int size_of_unique_keys = obj_set.size();
-        Object[]unique = obj_set.toArray();
+        //make this unique thing dynamic.
+        Object[]unique =label.unique("Species");
         int []counts = new int[size_of_unique_keys];
         int tmp_count = 0;
 
@@ -72,6 +75,7 @@ public class KNNClassifier {
         Object predictions[] = new Object[test.shape()[0]];
         predictions[0] = tmp;
 
+
         return predictions;
     }
 
@@ -95,6 +99,7 @@ public class KNNClassifier {
 
                tmp += Double.parseDouble(this.data.element(j,i).toString())-Double.parseDouble(test.element(j,0).toString());
             }
+            if(tmp<0) tmp*=-1;
             tmp = Math.sqrt(tmp) ;
             results[i] = tmp;
             tmp =0;

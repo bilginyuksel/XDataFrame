@@ -120,10 +120,10 @@ public class Main {
         DataFrame df5 = df3.read_csv("iris.csv");
         knn.fit(df3.loc(1,5),df5.column("Species"));
         Object [][] test = new Object[1][4];
-        test[0][0] =5.0;
+        test[0][0] =5.9;
         test[0][1] =3.0;
-        test[0][2] = 1.0;
-        test[0][3] = 0.7;
+        test[0][2] = 5.1;
+        test[0][3] = 1.8;
 
         DataFrame df4 = new DataFrame();
         for(Object o : knn.predict(df4.arrayToDataFrame(test)))
@@ -138,11 +138,11 @@ public class Main {
         }
         int[][] omg = new int[150][1];
         for(int i=0;i<50;i++)
-            omg[i][0] = 0;
+            omg[i][0] = 1;
         for(int i=50;i<100;i++)
-            omg[i][0]=1;
-        for(int i=100;i<150;i++)
             omg[i][0]=2;
+        for(int i=100;i<150;i++)
+            omg[i][0]=3;
 
         System.out.println("***************************************************************");
 
@@ -163,8 +163,43 @@ public class Main {
 
         System.out.println("**************************************************************");
 
-        //NormalEquation n = new NormalEquation(df3,new DataFrame().arrayToDataFrame(omg),bayes);
+        NormalEquation n = new NormalEquation();
+        Integer[][] xx = new Integer[2][4];
+        Integer[][] yy = new Integer[4][1];
+        for(int i=0;i<xx.length;i++)
+            for(int j=0;j<xx[0].length;j++)
+                xx[i][j] = random.nextInt(5);
 
+
+        for(int i=0;i<yy.length;i++)
+            for(int j=0;j<yy[0].length;j++)
+                yy[i][j] = random.nextInt(5);
+
+        Object[][] zz = n.multiply(xx,yy);
+        System.out.println("XX Matrix");
+        for(int i=0;i<xx.length;i++){
+            for(int j=0;j<xx[0].length;j++){
+                System.out.print(xx[i][j]+"  ");
+            }
+            System.out.println();
+        }
+        System.out.println("YY Matrix");
+        for(int i=0;i<yy.length;i++){
+            for(int j=0;j<yy[0].length;j++){
+                System.out.print(yy[i][j]+"  ");
+            }
+            System.out.println();
+        }
+        System.out.println("ZZ Matrix");
+        for(int i=0;i<zz.length;i++){
+            for(int j=0;j<zz[0].length;j++){
+                System.out.print(zz[i][j]+"  ");
+            }
+            System.out.println();
+        }
+        n.fit(df3,new DataFrame().arrayToDataFrame(omg));
+        n.predict(new DataFrame().arrayToDataFrame(test));
+        n.predict(test);
     }
 
 }

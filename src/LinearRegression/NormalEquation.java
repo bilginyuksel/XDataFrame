@@ -2,38 +2,86 @@ package LinearRegression;
 
 import DataFrame.DataFrame;
 
+
 public class NormalEquation {
     private DataFrame X,y;
     private int feature_size ;
     private int row_size ;
+    private Object theta[];
 
-    public NormalEquation(DataFrame X,DataFrame y,Object[][] matrix){
+
+    public NormalEquation(){
+    }
+
+    public void fit(DataFrame X,DataFrame y){
+        /*
+        * finds best coefficients theta
+        * formula : theta = (Xtranspoze multiply X )inverse multiply transpozeX multiply label */
         this.X = X;
         this.y = y;
         this.feature_size = X.shape()[1];
         this.row_size = X.shape()[0];
 
+        //theta0 involved.
+        this.theta = new Object[feature_size+1];
+        Object []tmp = y.array_from_column(0);
+        Object[][] label = new Object[tmp.length][1];
+        for(int i=0;i<tmp.length;i++)
+            label[i][0] = tmp[i];
+        Object [][] tmp_theta;
+        tmp_theta = multiply(multiply(matrix_inverse(multiply(transpozed_X(),normal_X())),transpozed_X()),label);
+
+        for(int i=0;i<tmp_theta.length;i++)
+            this.theta[i] = tmp_theta[i][0];
+        //print theta parameters
+        System.out.println("Matris Theta");
+        for(int i=0;i<theta.length;i++){
+            System.out.println("Theta"+i+"  : "+theta[i] );
+        }
+
+    }
+
+    public double[] predict(DataFrame X){
+        int test_row = X.shape()[0];
+        double predicts[] = new double[test_row];
+        for(int i=0;i<test_row;i++){
+            Object tmp[] = X.row(i);
+            double sum = Double.parseDouble(theta[0].toString());
+            for(int j=0;j<tmp.length;j++){
+                sum+= Double.parseDouble(tmp[j].toString())*Double.parseDouble(theta[j].toString());
+            }
+            predicts[i] = sum;
+        }
+
+        System.out.println("Normal Equation Predicts");
+        for(int i=0;i<predicts.length;i++)
+            System.out.println("Predict : " + predicts[i]);
+
+        return predicts;
+    }
+
+    public void predict(Object [][]X){
+        double sum = 0;
+        sum = Double.parseDouble(theta[0].toString());
+        for(int i=1;i<theta.length;i++){
+            sum += Double.parseDouble(X[0][i-1].toString())*Double.parseDouble(theta[i].toString());
+        }
+
+        System.out.println("Predict Sum : " + sum);
     }
 
 
 
     private Object[][] normal_X(){
 
-        Object[][] normal_X = new Object[row_size][feature_size];
-        for(int i=0;i<feature_size;i++)
-            normal_X[0][i] = 1;
+        Object[][] normal_X = new Object[row_size][feature_size+1];
+        for(int i=0;i<row_size;i++)
+            normal_X[i][0] = 1;
 
-        for(int i=1;i<row_size;i++)
+        for(int i=0;i<row_size;i++)
             for(int j=0;j<feature_size;j++)
-                normal_X[i][j] = X.element(j,i);
+                normal_X[i][j+1] = X.element(j,i);
 
-        System.out.println("Normal X");
-        for(int i=0;i<normal_X.length;i++){
-            for(int j=0;j<normal_X[i].length;j++){
-                System.out.print(normal_X[i][j] + "  ");
-            }
-            System.out.println();
-        }
 
 
         return normal_X;
@@ -41,23 +89,37 @@ public class NormalEquation {
     private Object[][] transpozed_X(){
 
 
-        Object[][] transpoze_X = new Object[feature_size][row_size];
+        Object[][] transpoze_X = new Object[feature_size+1][row_size];
+
+        for(int i=0;i<row_size;i++)
+            transpoze_X[0][i] = 1;
 
         for(int i=0;i<feature_size;i++)
-            transpoze_X[i][0] = 1;
+            for(int j=0;j<row_size;j++)
+                transpoze_X[i+1][j] = X.element(i,j);
 
-        for(int i=0;i<feature_size;i++)
-            for(int j=1;j<row_size;j++)
-                transpoze_X[i][j] = X.element(i,j);
-
-        System.out.println("Transpoze X");
-            for(int i=0;i<transpoze_X.length;i++){
-                for(int j=0;j<transpoze_X[i].length;j++){
-                    System.out.print(transpoze_X[i][j] +"  ");
-                }
-                System.out.println();
-            }
         return transpoze_X;
+    }
+
+    public Object[][] multiply(Object[][] first,Object[][] second){
+
+        /*
+        * matrix multiplication... works for every kind of matrix*/
+        int first_row = first.length;
+        int first_col = first[0].length;
+        int second_col =second[0].length;
+
+        Double [][] result = new Double[first_row][second_col];
+
+        for(int i=0;i<first_row;i++){
+            for(int j=0;j<second_col;j++){
+                result[i][j] = 0.0;
+                for(int k=0;k<first_col;k++){
+                    result[i][j] += Double.parseDouble(first[i][k].toString())*Double.parseDouble(second[k][j].toString());
+                }
+            }
+        }
+        return result;
     }
 
 
@@ -91,7 +153,7 @@ public class NormalEquation {
     }
 
 
-    private Object[][] matrix_inverse(Object[][] matrix){
+    public Object[][] matrix_inverse(Object[][] matrix){
         /*
         * matrix inverse with gauss-jordan elimination method
         * for nxn matrix*/
