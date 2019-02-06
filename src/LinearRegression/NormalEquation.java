@@ -4,10 +4,35 @@ import DataFrame.DataFrame;
 
 
 public class NormalEquation {
+
+
+    //you can write function for one hot encoding or dummies to dataframe class
+    //functions like changes data labels type object to numerical
+
+    /*
+    * many to one
+    * NormalEquation works with labeled data and labels should be numerical :
+    * double or int doesnt matter but it should numerical
+    *
+    * Sample Using : ----------------------------------------------------------------
+    *
+    * NormalEquation n = new NormalEquation();
+    * n.fit(train_data,train_labels);
+    * double [] predicts = n.predict(test_data);
+    *
+    * for(int i = 0; i<predicts.length;i++){
+    * System.out.println("Normal Equation Predict : " + predicts[i] );
+    * }
+    *
+    * ------------------------------------------------------------------------------------
+    *
+    * */
+
     private DataFrame X,y;
     private int feature_size ;
     private int row_size ;
     private Object theta[];
+
 
 
     public NormalEquation(){
@@ -42,6 +67,9 @@ public class NormalEquation {
     }
 
     public double[] predict(DataFrame X){
+        /*
+        * this function predicts the given DataFrame then returns the predicts array
+        * */
         int test_row = X.shape()[0];
         double predicts[] = new double[test_row];
         for(int i=0;i<test_row;i++){
@@ -61,6 +89,8 @@ public class NormalEquation {
     }
 
     public void predict(Object [][]X){
+        /*
+        * it predicts the given 2D array */
         double sum = 0;
         sum = Double.parseDouble(theta[0].toString());
         for(int i=1;i<theta.length;i++){
@@ -104,7 +134,9 @@ public class NormalEquation {
     public Object[][] multiply(Object[][] first,Object[][] second){
 
         /*
-        * matrix multiplication... works for every kind of matrix*/
+        * matrix multiplication... works for every kind of matrix
+        * first matrix multiply second matrix.
+        * if you are dealing with matrixes queue is important*/
         int first_row = first.length;
         int first_col = first[0].length;
         int second_col =second[0].length;
@@ -123,6 +155,7 @@ public class NormalEquation {
     }
 
 
+    //finsih calculate adjoint for calculate determinant
     private Object[][] calculate_adjoint(int threshold_row,int threshold_column,Object[][] matrix){
         int matrix_row_len = matrix.length;
         int matrix_col_len = matrix[0].length;

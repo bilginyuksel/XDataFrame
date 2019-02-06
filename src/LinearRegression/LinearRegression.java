@@ -9,6 +9,7 @@ public class LinearRegression {
     private int lenght_data_columns,length_data_rows;
 
     //need edit hypothesis always returns 0.0 globals dont work.
+    //needs whole check...
 
     //Algorithm Settings
     private double alpha = 0.01;

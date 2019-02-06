@@ -5,7 +5,7 @@ import KNN.KNNClassifier;
 import LinearRegression.LinearRegression;
 import LinearRegression.NormalEquation;
 import LinearRegression.SimpleLinearRegression;
-import jdk.swing.interop.SwingInterOpUtils;
+
 
 import java.util.Random;
 
@@ -200,6 +200,9 @@ public class Main {
         n.fit(df3,new DataFrame().arrayToDataFrame(omg));
         n.predict(new DataFrame().arrayToDataFrame(test));
         n.predict(test);
+
+
+        System.out.println("*****************************************************************************");
     }
 
 }

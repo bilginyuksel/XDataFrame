@@ -2,6 +2,20 @@ package LinearRegression;
 
 public class SimpleLinearRegression {
 
+    /*
+    * this algorithm works with one to one should be one dimension data one dimension label
+    *
+    * Sample Using ----------------------------------------------------------------------
+    * SimpleLinearRegression slr = new SimpleLinearRegression();
+    * #auto alpha = 0.01 auto iteration = 100;
+    * slr.fit(train_data,train_label);
+    * double predict = slr.predict(test_data);
+    * System.out.println("Simple Linear Regression model Predict : " + predict);
+    *
+    * -----------------------------------------------------------------------------------
+    *
+    * */
+
     private double Theta0;
     private double Theta1;
     private double alpha;

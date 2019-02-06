@@ -1,10 +1,22 @@
 package KNN;
 import DataFrame.DataFrame;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class KNNClassifier {
+
+    //we can add functions to that class like calculating score...
+    //or exceptions for setting k parameter bigger than data length etc.
+
+    /*
+    * knn - k-nearest neighbors algorithm for labeled data. it is a classification algorithm
+    * Sample Using : ------------------------------------------------------------------
+    *
+    * KnnClassifier knn = new KnnClasifier(); #empty constructor means your k = 3
+    * knn.fit(train_data,train_label);
+    * knn.predict(test_data);
+    *
+    *---------------------------------------------------------------------------------------------
+    *
+    * */
 
     private DataFrame data,label;
     private int k_NN;
@@ -14,6 +26,7 @@ public class KNNClassifier {
     public KNNClassifier(int k_NN){
         this.k_NN =k_NN;
     }
+    public KNNClassifier(){this.k_NN = 3;}
 
     public void fit(DataFrame X,DataFrame y){
         this.data = X;
@@ -25,6 +38,9 @@ public class KNNClassifier {
         * Predict method of knn class. First of all finds distances beetween test set and all train set with euclidian Distance function
         * After finding distances sorts the distances. And finds neigbors according to K-nearest-neighbor number.Then calculates the
         * weight of which class has high rate. After that process returns the answer.
+        *
+        * this algorithm solves many to one problems. if label dataframe has features more than one
+        * answer might be wrong.
         * */
         this.distances = euclidianDistance(test);
         this.indexes_of_distances= new int[distances.length];
@@ -42,11 +58,9 @@ public class KNNClassifier {
             System.out.println("Neigbors :" + o);
 
 
-        //Test set a couple times
-        Set<Object> obj_set = new HashSet<>(Arrays.asList(neighbors));
-        int size_of_unique_keys = obj_set.size();
-        //make this unique thing dynamic.
-        Object[]unique =label.unique("Species");
+
+        Object[]unique =label.unique(label.column_names()[0].toString());
+        int size_of_unique_keys = unique.length;
         int []counts = new int[size_of_unique_keys];
         int tmp_count = 0;
 
@@ -70,8 +84,6 @@ public class KNNClassifier {
             }
         }
 
-        //find neighbors weight
-        //Write unique function for label type count
         Object predictions[] = new Object[test.shape()[0]];
         predictions[0] = tmp;
 

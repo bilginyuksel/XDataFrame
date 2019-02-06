@@ -2,12 +2,15 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/Main.java" />
-    <bookmark url="file://$PROJECT_DIR$/src/LinearRegression/NormalEquation.java" line="94" />
+    <bookmark url="file://$PROJECT_DIR$/src/LinearRegression/NormalEquation.java" line="124" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c19f7b-0ce5-4419-811f-317083472347" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/DataFrame/DataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFrame/DataFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/KNN/KNNClassifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KNN/KNNClassifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearRegression/LinearRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearRegression/LinearRegression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinearRegression/NormalEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearRegression/NormalEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearRegression/SimpleLinearRegression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearRegression/SimpleLinearRegression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinearRegression/LinearRegression.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="198">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="method#LinearRegression#0;class#LinearRegression#0" />
                 <element signature="method#fit#0;class#LinearRegression#0" />
@@ -38,15 +41,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinearRegression/NormalEquation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+            <state relative-caret-position="360">
+              <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
               <folding>
                 <element signature="method#fit#0;class#NormalEquation#0" />
                 <element signature="method#predict#0;class#NormalEquation#0" />
                 <element signature="method#predict#1;class#NormalEquation#0" />
                 <element signature="method#normal_X#0;class#NormalEquation#0" />
                 <element signature="method#transpozed_X#0;class#NormalEquation#0" />
-                <element signature="method#multiply#0;class#NormalEquation#0" />
                 <element signature="method#calculate_adjoint#0;class#NormalEquation#0" />
                 <element signature="method#matrix_inverse#0;class#NormalEquation#0" />
               </folding>
@@ -55,12 +57,80 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/DataFrame/DataFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="150" column="32" lean-forward="true" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
+            <state relative-caret-position="414">
+              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#arrayToDataFrame#0;class#DataFrame#0" />
+                <element signature="method#arrayToDataFrame#1;class#DataFrame#0" />
+                <element signature="method#arrayToDataFrame#2;class#DataFrame#0" />
+                <element signature="method#arrayToDataFrame#3;class#DataFrame#0" />
+                <element signature="method#read_csv#0;class#DataFrame#0" />
+                <element signature="method#editColumn#0;class#DataFrame#0" />
+                <element signature="method#column#0;class#DataFrame#0" />
+                <element signature="method#newColumn#0;class#DataFrame#0" />
+                <element signature="method#array_from_column#0;class#DataFrame#0" />
+                <element signature="method#changeElement#0;class#DataFrame#0" />
+                <element signature="method#loc#0;class#DataFrame#0" />
+                <element signature="method#iloc#0;class#DataFrame#0" />
+                <element signature="method#column_names#0;class#DataFrame#0" />
+                <element signature="method#shape#0;class#DataFrame#0" />
+                <element signature="method#head#0;class#DataFrame#0" />
+                <element signature="method#head#1;class#DataFrame#0" />
+                <element signature="method#tail#0;class#DataFrame#0" />
+                <element signature="method#tail#1;class#DataFrame#0" />
+                <element signature="method#info#0;class#DataFrame#0" />
+                <element signature="method#describe#0;class#DataFrame#0" />
+                <element signature="method#unique#0;class#DataFrame#0" />
+                <element signature="method#row#0;class#DataFrame#0" />
+                <element signature="method#mean#0;class#DataFrame#0" />
+                <element signature="method#toString#0;class#DataFrame#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinearRegression/SimpleLinearRegression.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+              <folding>
+                <element signature="method#SimpleLinearRegression#0;class#SimpleLinearRegression#0" />
+                <element signature="method#SimpleLinearRegression#1;class#SimpleLinearRegression#0" />
+                <element signature="method#SimpleLinearRegression#2;class#SimpleLinearRegression#0" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#950#951#0" expanded="true" />
+                <element signature="method#derive_theta0#0;class#SimpleLinearRegression#0" />
+                <element signature="method#derive_theta1#0;class#SimpleLinearRegression#0" />
+                <element signature="method#fit#0;class#SimpleLinearRegression#0" />
+                <element signature="e#1606#1607#0" expanded="true" />
+                <element signature="e#1642#1643#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/KNN/KNNClassifier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding>
+                <element signature="method#predict#0;class#KNNClassifier#0" />
+                <element signature="method#euclidianDistance#0;class#KNNClassifier#0" />
+                <element signature="method#sort#0;class#KNNClassifier#0" />
               </folding>
             </state>
           </provider>
@@ -96,12 +166,12 @@
         <option value="$PROJECT_DIR$/src/Row.java" />
         <option value="$PROJECT_DIR$/src/DataFrame/Row.java" />
         <option value="$PROJECT_DIR$/src/KNN/Knn.java" />
-        <option value="$PROJECT_DIR$/src/DataFrame/DataFrame.java" />
+        <option value="$PROJECT_DIR$/src/KNN/KNNClassifier.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/LinearRegression/LinearRegression.java" />
         <option value="$PROJECT_DIR$/src/LinearRegression/SimpleLinearRegression.java" />
-        <option value="$PROJECT_DIR$/src/KNN/KNNClassifier.java" />
         <option value="$PROJECT_DIR$/src/LinearRegression/NormalEquation.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/DataFrame/DataFrame.java" />
       </list>
     </option>
   </component>
@@ -116,6 +186,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -128,24 +200,10 @@
               <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="XDataFrame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="KNN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="XDataFrame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="XDataFrame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="LinearRegression" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,7 +261,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18072289" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18273093" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -307,25 +365,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/KNN/KNNClassifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="method#predict#0;class#KNNClassifier#0" />
+            <element signature="method#euclidianDistance#0;class#KNNClassifier#0" />
+            <element signature="method#sort#0;class#KNNClassifier#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinearRegression/LinearRegression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="method#LinearRegression#0;class#LinearRegression#0" />
+            <element signature="method#fit#0;class#LinearRegression#0" />
+            <element signature="method#predict#0;class#LinearRegression#0" />
+            <element signature="method#hypothesis#0;class#LinearRegression#0" />
+            <element signature="method#costFunction#0;class#LinearRegression#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinearRegression/SimpleLinearRegression.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        <state relative-caret-position="288">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding>
             <element signature="method#SimpleLinearRegression#0;class#SimpleLinearRegression#0" />
             <element signature="method#SimpleLinearRegression#1;class#SimpleLinearRegression#0" />
             <element signature="method#SimpleLinearRegression#2;class#SimpleLinearRegression#0" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
             <element signature="method#derive_theta0#0;class#SimpleLinearRegression#0" />
             <element signature="method#derive_theta1#0;class#SimpleLinearRegression#0" />
             <element signature="method#fit#0;class#SimpleLinearRegression#0" />
+            <element signature="e#1606#1607#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinearRegression/NormalEquation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+          <folding>
+            <element signature="method#fit#0;class#NormalEquation#0" />
+            <element signature="method#predict#0;class#NormalEquation#0" />
+            <element signature="method#predict#1;class#NormalEquation#0" />
+            <element signature="method#normal_X#0;class#NormalEquation#0" />
+            <element signature="method#transpozed_X#0;class#NormalEquation#0" />
+            <element signature="method#calculate_adjoint#0;class#NormalEquation#0" />
+            <element signature="method#matrix_inverse#0;class#NormalEquation#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFrame/DataFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="527" selection-start-line="527" selection-end-line="527" />
+        <state relative-caret-position="414">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#arrayToDataFrame#0;class#DataFrame#0" />
@@ -352,60 +463,6 @@
             <element signature="method#row#0;class#DataFrame#0" />
             <element signature="method#mean#0;class#DataFrame#0" />
             <element signature="method#toString#0;class#DataFrame#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/KNN/KNNClassifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#predict#0;class#KNNClassifier#0" />
-            <element signature="method#euclidianDistance#0;class#KNNClassifier#0" />
-            <element signature="method#sort#0;class#KNNClassifier#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinearRegression/LinearRegression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding>
-            <element signature="method#LinearRegression#0;class#LinearRegression#0" />
-            <element signature="method#fit#0;class#LinearRegression#0" />
-            <element signature="method#predict#0;class#LinearRegression#0" />
-            <element signature="method#hypothesis#0;class#LinearRegression#0" />
-            <element signature="method#costFunction#0;class#LinearRegression#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinearRegression/NormalEquation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding>
-            <element signature="method#fit#0;class#NormalEquation#0" />
-            <element signature="method#predict#0;class#NormalEquation#0" />
-            <element signature="method#predict#1;class#NormalEquation#0" />
-            <element signature="method#normal_X#0;class#NormalEquation#0" />
-            <element signature="method#transpozed_X#0;class#NormalEquation#0" />
-            <element signature="method#multiply#0;class#NormalEquation#0" />
-            <element signature="method#calculate_adjoint#0;class#NormalEquation#0" />
-            <element signature="method#matrix_inverse#0;class#NormalEquation#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="150" column="32" lean-forward="true" selection-start-line="150" selection-start-column="32" selection-end-line="150" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -14,6 +14,8 @@ import java.util.Set;
 
 public class DataFrame {
 
+    //General explanation and add methods , one hot encoding,dummies
+
     private ArrayList<Column> columns;
     private ArrayList<Row> rows;
 
