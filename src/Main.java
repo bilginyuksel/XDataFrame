@@ -203,6 +203,19 @@ public class Main {
 
 
         System.out.println("*****************************************************************************");
+
+        DataFrame df7 = new DataFrame();
+        df7 = df7.read_csv("Iris.csv");
+
+        System.out.println(df7.head());
+        df7 = df7.sort("PetalLengthCm",true);
+        System.out.println("Sorted");
+        System.out.println(df7.head());
+        System.out.println("look Columns");
+        System.out.println(df7.column("PetalLengthCm"));
+
+
+
     }
 
 }

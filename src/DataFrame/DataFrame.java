@@ -334,10 +334,13 @@ public class DataFrame {
             System.out.println("DataFrame.Row Length : " +temp.length);
             System.out.println("DataFrame.Column Length : " +temp[0].length);
 
+
             while((line = bufferedReader.readLine())!=null){
+
 
                 //0,1,2,3 is going like rows.
                 Object tmp[] = line.split(cvs_split_comma);
+
                 for(int j = 0;j<tmp.length;j++){
                     temp[i][j] = tmp[j];
                 }
@@ -863,6 +866,75 @@ public class DataFrame {
         }
 
         return mean/columns.get(i).size();
+    }
+
+    public DataFrame sort(String feature_name,boolean index){
+
+
+        /*
+        * sort function for dataframe sorts one column finds the real indexes
+        * according to that column and changes every columns position
+        * then creates new DataFrame()
+        *
+        * Something wrong on the sorting part*/
+
+        int i=0;
+
+        for(i=0;i<columns.size();i++){
+            if(columns.get(i).getFeature_name().equals(feature_name))
+                break;
+        }
+
+        int length = columns.get(i).getElements().size();
+        Object[] elements= columns.get(i).getElements().toArray();
+
+        System.out.println("Elements ");
+        for(Object o:elements)
+            System.out.println(o.toString());
+
+        int indexes[] = new int[length];
+
+        for(int j=0;j<length;j++){
+            indexes[j] = j;
+        }
+
+        int min_index;
+        for(int k=0;k<length-1;k++){
+            min_index = k;
+            for(int j=k;j<length;j++){
+                if(Double.parseDouble(elements[min_index].toString())>=Double.parseDouble(elements[j].toString()))
+                    min_index = j;
+            }
+            Object tmp = elements[k];
+            elements[k] = elements[min_index];
+            elements[min_index] = tmp;
+            int tmp_indexes = indexes[k];
+            indexes[k] = indexes[min_index];
+            indexes[min_index] = tmp_indexes;
+        }
+            //indexes known right now.
+            //we have to change indexes for every column
+            /*
+            * this for loop sorts all columns
+            * according to indexes found on top of the code
+            * */
+            ArrayList<Column> sorted_col = new ArrayList<>();
+            for(int k=0;k< columns.size();k++){
+                Object tmp[] = columns.get(k).getElements().toArray();
+
+                for(int j=0;j<length;j++){
+                    Object tmp_val = tmp[j];
+                    tmp[j] = tmp[indexes[j]];
+                    tmp[indexes[j]] = tmp_val;
+                }
+                System.out.println("Sorted Objects");
+                for(Object o:tmp)
+                    System.out.println(o.toString());
+                sorted_col.add(new Column(columns.get(k).getFeature_name(),tmp));
+            }
+            //Row not manipulated.. think about row
+
+        return new DataFrame(this.rows,sorted_col);
     }
 
     @Override
